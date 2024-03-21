@@ -1,0 +1,3 @@
+" Use default live preview option of your IDE "
+                OR
+" Copy the path of "index.html" and paste it into your browser"                
