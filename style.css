@@ -1,26 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    margin: 0;
+    padding: 0;
   }
-  
+
   .header {
-    background-color: #f8f9fa; 
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .search-bar {
-    margin: 20px 0;
-    text-align: center;
-  }
-  
-  .search-button {
-    padding: 10px;
-    margin: 0 5px;
-    background-color: #007bff;  
-    border: none;
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
-    cursor: pointer;
-    border-radius: 0.25rem;
+    text-align: center;
+    padding: 40px 20px; /* Larger padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-bottom: 30px; /* Space below header */
+  }
+
+  .header h1 {
+    font-size: 3rem; /* Larger font size */
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-transform: uppercase; /* Capitalize letters */
+    letter-spacing: 1.5px; /* Spacing between letters */
   }
   
   .card {
@@ -76,7 +81,35 @@ body {
   .modal-content {
     background: #fff;  
   }
-   
+  .btn-primary {
+    display: block;  
+    width: 100%;  
+    margin: 0.5rem 0;
+    background-color: #004085;  /* A deep blue, adjust the color to match your theme */
+    border-color: #003366; /* A slightly darker border for depth */
+    color: #fff; /* White text for contrast */
+    padding: 0.75rem 1.25rem; /* Generous padding for a larger click area and visual impact */
+    font-size: 1rem; /* Adequate font size for readability */
+    line-height: 1.5; /* Optimal line height for the button text */
+    border-radius: 0.375rem; /* Rounded corners, but not too much */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for some depth */
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, 
+                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition for hover effects */
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #0056b3; /* A lighter blue for the hover state */
+    border-color: #00488a; /* A matching border color for the hover state */
+    box-shadow: 0 0 0 0.2rem rgba(0, 76, 133, 0.5); /* A glow effect for focus/hover */
+  }
+  
+  .btn-primary:active {
+    background-color: #003865; /* Even darker for the active state */
+    border-color: #002b4e; /* Border color for the active state */
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); /* Inner shadow for a pressed effect */
+  }
+  
 #universityModal .card {
     max-width: 400px;  
     margin: auto;  
@@ -100,4 +133,129 @@ body {
     max-width: 700px;  
     margin: 30px auto;  
   }
-     
+  .d-none {
+    display: none !important;
+  }
+  /* Container for the filter options */
+.filter-container {
+    background: #f2f2f2; /* Light grey background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around the content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px; /* Margin top for spacing */
+}
+
+/* Custom styling for form-check components */
+.form-check {
+    padding: 10px; /* Padding around the checkbox for better clickability */
+    margin-bottom: 10px; /* Margin bottom for spacing */
+}
+
+/* Styling for each checkbox input */
+.form-check-input {
+    width: 20px; /* Width of the checkbox */
+    height: 20px; /* Height of the checkbox */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Relative position for pseudo-elements */
+    appearance: none; /* Remove default styles */
+    border: 2px solid #007bff; /* Blue border color */
+    border-radius: 5px; /* Slightly rounded corners for the checkbox */
+    outline: none; /* Remove focus outline */
+    transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for background and border color */
+}
+
+/* Checkmark appearance when checked */
+.form-check-input:checked {
+    background-color: #007bff; /* Blue background for checked state */
+    border-color: #0056b3; /* Darker blue border for checked state */
+}
+
+/* Pseudo-element for the checkmark */
+.form-check-input:checked::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 6px;
+    height: 11px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Styling for labels associated with each checkbox */
+.form-check-label {
+    margin-left: 10px; /* Space between checkbox and label */
+    font-size: 16px; /* Larger font size for better readability */
+    color: #333; /* Dark grey color for text */
+    cursor: pointer; /* Pointer cursor on hover */
+    user-select: none; /* Prevent text selection */
+}
+
+/* Hover effect on the custom checkbox */
+.form-check-input:hover {
+    border-color: #0056b3; /* Darker border on hover */
+}
+/* Container for the filter options */
+.filter-container {
+  background: #f2f2f2; /* Light grey background */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding around the content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 20px; /* Margin top for spacing */
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-around; /* Space out checkboxes evenly */
+}
+
+/* Styling for form-check components (adjusted for horizontal layout) */
+.form-check {
+  margin: 5px 10px; /* Margins for spacing between checkboxes */
+  display: flex; /* Display flex to align checkbox and label horizontally */
+  align-items: center; /* Align items vertically in the center */
+}
+
+/* Styling for each checkbox input */
+.form-check-input {
+  width: 20px; /* Width of the checkbox */
+  height: 20px; /* Height of the checkbox */
+  cursor: pointer; /* Pointer cursor on hover */
+  appearance: none; /* Remove default styles */
+  border: 2px solid #007bff; /* Blue border color */
+  border-radius: 5px; /* Slightly rounded corners for the checkbox */
+  outline: none; /* Remove focus outline */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+}
+
+/* Checkmark appearance when checked */
+.form-check-input:checked {
+  background-color: #007bff; /* Blue background for checked state */
+  border-color: #0056b3; /* Darker blue border for checked state */
+}
+
+/* Pseudo-element for the checkmark */
+.form-check-input:checked::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* Styling for labels associated with each checkbox */
+.form-check-label {
+  margin-left: 10px; /* Space between checkbox and label */
+  font-size: 16px; /* Larger font size for better readability */
+  color: #333; /* Dark grey color for text */
+  cursor: pointer; /* Pointer cursor on hover */
+  user-select: none; /* Prevent text selection */
+}
+
+/* Hover effect on the custom checkbox */
+.form-check-input:hover {
+  border-color: #0056b3; /* Darker border on hover */
+}
