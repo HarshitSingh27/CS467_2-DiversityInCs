@@ -27,7 +27,6 @@
     text-transform: uppercase; /* Capitalize letters */
     letter-spacing: 1.5px; /* Spacing between letters */
   }
-  
   .card {
     margin-bottom: 20px;
     text-align: center;
@@ -35,7 +34,11 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: none;
     border-radius: 0.25rem;
+    height: 400px; /* Adjust the height as needed */
+    overflow: hidden; /* Hide any content that exceeds the height */
+    position: relative;
   }
+  
   
   .card:hover {
     transform: translateY(-5px);
@@ -85,6 +88,7 @@
     display: block;  
     width: 100%;  
     margin: 0.5rem 0;
+    margin-bottom: auto;
     background-color: #004085;  /* A deep blue, adjust the color to match your theme */
     border-color: #003366; /* A slightly darker border for depth */
     color: #fff; /* White text for contrast */
@@ -116,19 +120,21 @@
   }
   
   #universityModal .card img {
-    width: 100%;  
+    width: 90%;  
     height: auto;  
+    padding-bottom: 20px;
   }
   
   #universityModal .card .card-body {
     padding: 1rem;  
   }
   
-  #universityModal .card .btn {
+  /* #universityModal .card .btn {
     display: block;  
-    width: auto;  
+    width: auto; 
+    padding-bottom: 2%; 
     margin: 0.5rem 0;  
-  }
+  } */
   #universityModal .modal-dialog {
     max-width: 700px;  
     margin: 30px auto;  
@@ -136,6 +142,9 @@
   .d-none {
     display: none !important;
   }
+  .modal-button .btn-primary {
+    margin-bottom: 20px; /* Adds space below the button */
+}
   /* Container for the filter options */
 .filter-container {
     background: #f2f2f2; /* Light grey background */
@@ -258,4 +267,46 @@
 /* Hover effect on the custom checkbox */
 .form-check-input:hover {
   border-color: #0056b3; /* Darker border on hover */
+}
+/* Style for tags */
+.tags {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background color to make tags stand out */
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.standard {
+  background-color: #007bff; /* Blue */
+  color: white;
+}
+
+.minority {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+.public {
+  background-color: #9834eb; /* Blue */
+  color: white;
+}
+
+.private {
+  background-color: #6c757d; /* Gray */
+  color: white;
+}
+
+.interesting {
+  background-color: #ffc107; /* Yellow */
+  color: black;
 }
