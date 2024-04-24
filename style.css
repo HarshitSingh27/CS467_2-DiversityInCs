@@ -72,15 +72,40 @@
   padding: 0.375rem 0.75rem;
   border-radius: 0.25rem;
 } 
+.footer {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  background-color: #f2f2f2;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-like {
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem; /* Default font size for the content in the footer */
+}
+
+.card-like h2, .card-like h3 {
+  font-size: 1.25rem; /* Adjusted font size for headings */
+}
+
+@media (max-width: 768px) {
   .footer {
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8f9fa;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+      position: relative; /* Adjusts positioning on smaller screens */
   }
+  .card-like {
+      padding: 10px; /* Smaller padding for smaller screens */
+      font-size: 0.85rem; /* Smaller font size for text on small screens */
+  }
+  .card-like h2, .card-like h3 {
+      font-size: 1.1rem; /* Smaller headings on small screens */
+  }
+}
+
   .modal-body img {
     width: 100%;  
     height: auto;  
