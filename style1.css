@@ -7,6 +7,7 @@ body {
     margin: 0;
     padding: 0;
   }
+  
 
   .header {
     background: #bdc3c7;  /* fallback for old browsers */
@@ -282,7 +283,7 @@ body {
   display: inline-block;
   padding: 4px 8px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: bold;
   margin-right: 5px;
 }
@@ -310,6 +311,10 @@ body {
   background-color: #ffc107; /* Yellow */
   color: black;
 }
+.women-only {
+    background-color: pink; /* Pink */
+    color: white;
+  }
 .btn-main-page {
     background-color: #007bff; /* Your theme's main color */
     color: white;
@@ -334,4 +339,37 @@ body {
     color: #fff;
     text-decoration: none; /* Remove underline from anchor on hover */
   }
+  .legend-list {
+    list-style: none; /* Removes default list styling */
+    padding-left: 0; /* Aligns list to the left */
+    margin-top: 0; /* Reduces space above the list */
+}
+
+.legend-list li {
+    margin-bottom: 10px; /* Adjust spacing between items */
+    font-size: 14px; /* Maintain a smaller font for compactness */
+}
+
+.legend-term {
+    font-weight: bold; /* Highlights terms */
+    color: #0056b3; /* Color for terms, can be adjusted */
+}
+
+#leg {
+    background-color:#f2f2f2; /* Subtle background color */
+    padding: 20px; /* Padding for the container */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow for depth */
+}
+
+h2 {
+    margin-bottom: 15px; /* Space below the header */
+    color: #333; /* Header color */
+}
+
+/* Ensures proper vertical alignment and spacing */
+.col-md-6:first-child h2 {
+    margin-bottom: 0; /* Removes bottom margin from the first column header */
+}
+
   

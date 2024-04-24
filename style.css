@@ -310,7 +310,10 @@
   background-color: #6c757d; /* Gray */
   color: white;
 }
-
+.women-only {
+  background-color: pink; /* Pink */
+  color: white;
+}
 .interesting {
   background-color: #ffc107; /* Yellow */
   color: black;
