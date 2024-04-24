@@ -6,7 +6,7 @@
 <title>Diversity in CS Faculty</title>
 <!-- Bootstrap CSS CDN -->
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style1.css">
 </head>
 <body>
 
@@ -17,27 +17,29 @@
     <div class="row">
       <div class="col-md-6 text-right">
         <!-- Main Page Button -->
-        <a href="index1.html" class="btn btn-main-page">Explore Universities</a>
+        <a href="index.html" class="btn btn-main-page">Interesting Results</a>
       </div>
       <div class="col-md-6 text-left">
         <!-- Main Page Button -->
         <a href="index2.html" class="btn btn-main-page">Explore Professors</a>
       </div>
+    <!-- The rest of your filter-container and other elements... -->
+
 <div class="container mt-4">
   <div class="row">
     <div class="col-md-12">
       <div class="filter-container">
         <div class="form-check">
-          <select class="form-control" id="rankingFilter">
-            <option value="all">All Rankings</option>
-            <option value="1-24">1-24</option>
-            <option value="25-49">25-49</option>
-            <option value="50-74">50-74</option>
-            <option value="75-99">75-99</option>
-            <option value="100-205">100-205</option>
-            <option value="Not Ranked">Not Ranked</option>
-          </select>
-        </div>
+            <select class="form-control" id="rankingFilter">
+              <option value="all">All Rankings</option>
+              <option value="1-24">1-24</option>
+              <option value="25-49">25-49</option>
+              <option value="50-74">50-74</option>
+              <option value="75-99">75-99</option>
+              <option value="100-205">100-205</option>
+              <option value="Not Ranked">Not Ranked</option>
+            </select>
+          </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="public">
           <label class="form-check-label" for="public">Public</label>
@@ -65,35 +67,15 @@
 
 
 
-<div class="row mb-4 align-items-stretch">
-  <!-- University Card -->
-  <div class="col-md-6 mb-4">
-    <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-      <img src="averageImages/UIUC.png" class="card-img-top" alt="University of Illinois Urbana Champaign">
-      <div class="card-body">
-        <div class="tags">
-          <span class="tag standard">Standard</span>
-          <span class="tag public">Public</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Text Card -->
-  <div class="col-md-6 mb-4">
-    <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-      <div class="card-body">
-        <a href="https://cs.illinois.edu/about/people/all-faculty" class="btn btn-primary btn-block">University of Illinois Urbana Champaign</a>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <!-- Additional content -->
-      </div>
-    </div>
-  </div>
-    
-<div class="col-md-6 mb-4">
-      <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-        <img src="averageImages/1-Univ. of California - Berkeley .png" class="card-img-top" alt="University of California Berkeley">
+<div class="container mt-4">
+  <div class="row">
+    <!-- Each card now uses Bootstrap's col classes for responsive adjustments -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card" data-public="true" data-category="standard">
+        <img src="averageImages/UIUC.png" class="card-img-top" alt="University of Illinois Urbana Champaign">
         <div class="card-body">
           <!-- University name as a button/link -->
+          <a href="https://cs.illinois.edu/about/people/all-faculty" class="btn btn-primary btn-block">University of Illinois Urbana Champaign</a>
           <div class="tags">
             <span class="tag standard">Standard</span>
             <span class="tag public">Public</span>
@@ -102,44 +84,43 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 mb-4">
-      <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
+    
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card" data-public="true" data-category="standard">
+        <img src="averageImages/1-Univ. of California - Berkeley .png" class="card-img-top" alt="University of California Berkeley">
         <div class="card-body">
+          <!-- University name as a button/link -->
           <a href="https://www2.eecs.berkeley.edu/Faculty/Lists/CS/faculty.html" class="btn btn-primary btn-block">University of California Berkeley</a>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <!-- Additional content -->
+          <div class="tags">
+            <span class="tag standard">Standard</span>
+            <span class="tag public">Public</span>
+            <!-- Add more tags as needed -->
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Carnegie Mellon University -->
-    <div class="col-md-6 mb-4">
-      <div class="card" data-public="false" data-category="standard" data-ranking="1-24">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card" data-public="false" data-category="standard">
         <img src="averageImages/1CMU.png" class="card-img-top" alt="Carnegie Mellon University">
         <div class="card-body">
+          <a href="https://s3d.cmu.edu/people/faculty-index.html" class="btn btn-primary btn-block">Carnegie Mellon University</a>
           <div class="tags">
             <span class="tag standard">Standard</span>
             <span class="tag private">Private</span>
             <!-- Add more tags as needed -->
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6 mb-4">
-      <div class="card" data-public="false" data-category="standard" data-ranking="1-24">
-        <div class="card-body">
-          <a href="https://s3d.cmu.edu/people/faculty-index.html" class="btn btn-primary btn-block">Carnegie Mellon University</a>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <!-- Additional content -->
         </div>
       </div>
     </div>
 
     <!-- Boston University -->
-    <div class="col-md-6 mb-4">
-      <div class="card" data-public="false" data-category="standard" data-ranking="1-24">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card" data-public="false" data-category="standard">
         <img src="averageImages/2-Boston University .png" class="card-img-top" alt="Boston University">
         <div class="card-body">
+          <a href="https://www.bu.edu/cs/people/faculty/" class="btn btn-primary btn-block">Boston University</a>
           <div class="tags">
             <span class="tag standard">Standard</span>
             <span class="tag private">Private</span>
@@ -148,21 +129,13 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 mb-4">
-      <div class="card" data-public="false" data-category="standard" data-ranking="1-24">
-        <div class="card-body">
-          <a href="https://www.bu.edu/cs/people/faculty/" class="btn btn-primary btn-block">Boston University</a>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <!-- Additional content -->
-        </div>
-      </div>
-    </div>
 
     <!-- University of Minnesota -->
-    <div class="col-md-6 mb-4">
-      <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+      <div class="card" data-public="true" data-category="standard">
         <img src="averageImages/2-University of Minnesota .png" class="card-img-top" alt="University of Minnesota">
         <div class="card-body">
+          <a href="https://cse.umn.edu/cs/faculty-instructor-directory" class="btn btn-primary btn-block">University of Minnesota</a>
           <div class="tags">
             <span class="tag standard">Standard</span>
             <span class="tag public">Public</span>
@@ -171,43 +144,27 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 mb-4">
-      <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-        <div class="card-body">
-          <a href="https://cse.umn.edu/cs/faculty-instructor-directory" class="btn btn-primary btn-block">University of Minnesota</a>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <!-- Additional content -->
-        </div>
-      </div>
-    </div>
       <!-- University of Tennessee -->
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="true" data-category="standard">
           <img src="averageImages/3-University of Tennessee.png" class="card-img-top" alt="University of Tennessee">
           <div class="card-body">
+            <a href="https://www.eecs.utk.edu/faculty/" class="btn btn-primary btn-block">University of Tennessee</a>
             <div class="tags">
               <span class="tag standard">Standard</span>
               <span class="tag public">Public</span>
               <!-- Add more tags as needed -->
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-          <div class="card-body">
-            <a href="https://www.eecs.utk.edu/faculty/" class="btn btn-primary btn-block">University of Tennessee</a>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <!-- Additional content -->
           </div>
         </div>
       </div>
   
       <!-- University of Texas at Arlington -->
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="true" data-category="standard">
           <img src="averageImages/3-University of Texas at Arlington .png" class="card-img-top" alt="University of Texas at Arlington">
           <div class="card-body">
+            <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/faculty-directory" class="btn btn-primary btn-block">University of Texas at Arlington</a>
             <div class="tags">
               <span class="tag standard">Standard</span>
               <span class="tag public">Public</span>
@@ -216,21 +173,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-          <div class="card-body">
-            <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/faculty-directory" class="btn btn-primary btn-block">University of Texas at Arlington</a>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <!-- Additional content -->
-          </div>
-        </div>
-      </div>
   
       <!-- Emory University -->
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="false" data-category="standard" data-ranking="1-24">
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="false" data-category="standard">
           <img src="averageImages/4-Emory University .png" class="card-img-top" alt="Emory University">
           <div class="card-body">
+            <a href="https://computerscience.emory.edu/people/index.html" class="btn btn-primary btn-block">Emory University</a>
             <div class="tags">
               <span class="tag standard">Standard</span>
               <span class="tag private">Private</span>
@@ -239,21 +188,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="false" data-category="standard" data-ranking="1-24">
-          <div class="card-body">
-            <a href="https://computerscience.emory.edu/people/index.html" class="btn btn-primary btn-block">Emory University</a>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <!-- Additional content -->
-          </div>
-        </div>
-      </div>
   
       <!-- New Mexico Tech -->
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="true" data-category="standard">
           <img src="averageImages/4-New Mexico Tech .png" class="card-img-top" alt="New Mexico Tech">
           <div class="card-body">
+            <a href="https://www.nmt.edu/academics/compsci/faculty/index.php" class="btn btn-primary btn-block">New Mexico Tech</a>
             <div class="tags">
               <span class="tag standard">Standard</span>
               <span class="tag public">Public</span>
@@ -262,21 +203,13 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-          <div class="card-body">
-            <a href="https://www.nmt.edu/academics/compsci/faculty/index.php" class="btn btn-primary btn-block">New Mexico Tech</a>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <!-- Additional content -->
-          </div>
-        </div>
-      </div>
   
       <!-- Texas State University -->
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="true" data-category="standard">
           <img src="averageImages/5-Texas State University .png" class="card-img-top" alt="Texas State University">
           <div class="card-body">
+            <a href="https://cs.txstate.edu/accounts/faculty/" class="btn btn-primary btn-block">Texas State University</a>
             <div class="tags">
               <span class="tag standard">Standard</span>
               <span class="tag public">Public</span>
@@ -285,21 +218,13 @@
           </div>          
         </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-          <div class="card-body">
-            <a href="https://cs.txstate.edu/accounts/faculty/" class="btn btn-primary btn-block">Texas State University</a>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <!-- Additional content -->
-          </div>
-        </div>
-      </div>
   
       <!-- University of Memphis -->
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="true" data-category="standard">
           <img src="averageImages/5-University of Memphis .png" class="card-img-top" alt="University of Memphis">
           <div class="card-body">
+            <a href="https://www.memphis.edu/cs/people/" class="btn btn-primary btn-block">University of Memphis</a>
             <div class="tags">
               <span class="tag standard">Standard</span>
               <span class="tag public">Public</span>
@@ -308,17 +233,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 mb-4">
-        <div class="card" data-public="true" data-category="standard" data-ranking="1-24">
-          <div class="card-body">
-            <a href="https://www.memphis.edu/cs/people/" class="btn btn-primary btn-block">University of Memphis</a>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <!-- Additional content -->
-          </div>
-        </div>
-      </div>
   
-  </div>
+    
   </div>
 </div>
 
@@ -351,6 +267,23 @@
     <div class="col">
       <h3>Face Composition</h3>
       <p>For details on the face composition analysis, please refer to our <a href="https://colab.research.google.com/drive/1AMMs4KCYE7bEYgfwJ1WbJnNWVyViQxWf?usp=sharing" target="_blank">Google Colab notebook</a>.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for displaying card details -->
+<div class="modal fade" id="universityModal" tabindex="-1" role="dialog" aria-labelledby="universityModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="universityModalLabel"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Dynamic content will be loaded here -->
+      </div>
     </div>
   </div>
 </div>
@@ -407,6 +340,34 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+
+    // Function to handle clicking on a card
+    function handleCardClick(event) {
+    var card = event.currentTarget; // Get the clicked card element
+    var modalTitle = document.querySelector('#universityModalLabel');
+    var button = card.querySelector('.btn-primary');
+    var imgHTML = card.querySelector('img').outerHTML; // Get the image HTML
+    var tagsHTML = card.querySelector('.tags').outerHTML; // Get the tags HTML
+
+    // Set the modal title to the button's text
+    modalTitle.textContent = button.textContent;
+
+    // Construct the new HTML structure for the modal body without the button
+    var modalContent = imgHTML + tagsHTML;
+
+    // Set the modal body content
+    var modalBody = document.querySelector('#universityModal .modal-body');
+    modalBody.innerHTML = modalContent;
+
+    $('#universityModal').modal('show'); // Show the modal
+}
+
+// Add click event listener to each card
+var cards = document.querySelectorAll('.card');
+cards.forEach(function(card) {
+    card.addEventListener('click', handleCardClick);
+});
 
 });
 </script>
