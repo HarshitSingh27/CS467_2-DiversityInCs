@@ -60,6 +60,10 @@
           <input class="form-check-input" type="checkbox" value="" id="interesting">
           <label class="form-check-label" for="interesting">Interesting</label>
         </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="women-only">
+            <label class="form-check-label" for="women-only">Women Only</label>
+        </div>
       </div>
     </div>
   </div>
@@ -233,10 +237,86 @@
           </div>
         </div>
       </div>
-  
-    
+      <!-- Wellesley College -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="false" data-category="private" data-women-only="true">
+          <img src="path_to_image/wellesley.png" class="card-img-top" alt="Wellesley College">
+          <div class="card-body">
+            <a href="#" class="btn btn-primary btn-block">Wellesley College</a>
+            <div class="tags">
+              <span class="tag private">Private</span>
+              <span class="tag women-only">Women only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Smith College -->
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="false" data-category="private" data-women-only="true">
+          <img src="path_to_image/smith.png" class="card-img-top" alt="Smith College">
+          <div class="card-body">
+            <a href="#" class="btn btn-primary btn-block">Smith College</a>
+            <div class="tags">
+              <span class="tag private">Private</span>
+              <span class="tag women-only">Women only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mount Holyoke College -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="false" data-category="private" data-women-only="true">
+          <img src="path_to_image/mount_holyoke.png" class="card-img-top" alt="Mount Holyoke College">
+          <div class="card-body">
+            <a href="#" class="btn btn-primary btn-block">Mount Holyoke College</a>
+            <div class="tags">
+              <span class="tag private">Private</span>
+              <span class="tag women-only">Women only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Vassar College -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="false" data-category="private" data-women-only="true">
+          <img src="path_to_image/vassar.png" class="card-img-top" alt="Vassar College">
+          <div class="card-body">
+            <a href="#" class="btn btn-primary btn-block">Vassar College</a>
+            <div class="tags">
+              <span class="tag private">Private</span>
+              <span class="tag women-only">Women only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Barnard College -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="false" data-category="private" data-women-only="true">
+          <img src="path_to_image/barnard.png" class="card-img-top" alt="Barnard College">
+          <div class="card-body">
+            <a href="#" class="btn btn-primary btn-block">Barnard College</a>
+            <div class="tags">
+              <span class="tag private">Private</span>
+              <span class="tag women-only">Women only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Agnes Scott College -->
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+        <div class="card" data-public="false" data-category="private" data-women-only="true">
+          <img src="path_to_image/agnes_scott.png" class="card-img-top" alt="Agnes Scott College">
+          <div class="card-body">
+            <a href="#" class="btn btn-primary btn-block">Agnes Scott College</a>
+            <div class="tags">
+              <span class="tag private">Private</span>
+              <span class="tag women-only">Women only</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
 <div class="container mt-3">
   <div class="text-center">
@@ -305,42 +385,45 @@ document.addEventListener('DOMContentLoaded', function () {
   rankingSelect.addEventListener('change', applyFilters); // Add event listener for ranking dropdown
 
   function applyFilters() {
-    const isPublic = document.getElementById('public').checked;
-    const isPrivate = document.getElementById('private').checked;
-    const isMinority = document.getElementById('minority').checked;
-    const isStandard = document.getElementById('standard').checked;
-    const isInteresting = document.getElementById('interesting').checked;
-    const selectedRanking = rankingSelect.value;
+        const isPublic = document.getElementById('public').checked;
+        const isPrivate = document.getElementById('private').checked;
+        const isMinority = document.getElementById('minority').checked;
+        const isStandard = document.getElementById('standard').checked;
+        const isInteresting = document.getElementById('interesting').checked;
+        const isWomenOnly = document.getElementById('women-only').checked;
+        const selectedRanking = rankingSelect.value;
+        const cards = document.querySelectorAll('.col-sm-6.col-md-4.col-lg-3'); // Directly target the grid columns
 
-    const cards = document.querySelectorAll('.card'); // Update selector to get all cards
+        cards.forEach(card => {
+            const cardData = card.querySelector('.card');
+            const publicAttr = cardData.getAttribute('data-public') === 'true';
+            const privateAttr = cardData.getAttribute('data-public') === 'false';
+            const minorityAttr = cardData.getAttribute('data-category') === 'minority';
+            const standardAttr = cardData.getAttribute('data-category') === 'standard';
+            const interestingAttr = cardData.getAttribute('data-category') === 'interesting';
+            const womenOnlyAttr = cardData.getAttribute('data-women-only') === 'true';
+            const rankingAttr = card.getAttribute('data-ranking');
+            let isMatch = true; // Assume the card matches filter criteria
+            if ((isPublic && !publicAttr) || (isPrivate && !privateAttr)) {
+                isMatch = false;
+            }
+            if ((isMinority && !minorityAttr) || (isStandard && !standardAttr) || (isInteresting && !interestingAttr)) {
+                isMatch = false;
+            }
+            if (isWomenOnly && !womenOnlyAttr) {
+            isMatch = false; // Apply the women-only filter
+            }
+            if (selectedRanking !== "all" && rankingAttr !== selectedRanking) {
+            isMatch = false; // Apply the ranking filter
+            }
 
-    cards.forEach(card => {
-      const publicAttr = card.getAttribute('data-public') === 'true';
-      const privateAttr = card.getAttribute('data-public') === 'false';
-      const minorityAttr = card.getAttribute('data-category') === 'minority';
-      const standardAttr = card.getAttribute('data-category') === 'standard';
-      const interestingAttr = card.getAttribute('data-category') === 'interesting';
-      const rankingAttr = card.getAttribute('data-ranking');
-
-      let isMatch = true; // Assume the card matches filter criteria
-      if ((isPublic && !publicAttr) || (isPrivate && !privateAttr)) {
-        isMatch = false;
-      }
-      if ((isMinority && !minorityAttr) || (isStandard && !standardAttr) || (isInteresting && !interestingAttr)) {
-        isMatch = false;
-      }
-      if (selectedRanking !== "all" && rankingAttr !== selectedRanking) {
-        isMatch = false;
-      }
-
-      if (isMatch) {
-        card.classList.remove('d-none');
-      } else {
-        card.classList.add('d-none');
-      }
-    });
-  }
-
+            if (isMatch) {
+                card.classList.remove('d-none');
+            } else {
+                card.classList.add('d-none');
+            }
+        });
+    }
 
     // Function to handle clicking on a card
     function handleCardClick(event) {
