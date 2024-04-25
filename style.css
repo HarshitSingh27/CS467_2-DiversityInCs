@@ -407,12 +407,6 @@ color: black;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow for depth */
   margin-bottom: 40px; /* Space below the legend */
 }
-
-h2 {
-  margin-bottom: 15px; /* Space below the header */
-  color: #333; /* Header color */
-}
-
 /* Ensures proper vertical alignment and spacing */
 .col-md-6:first-child h2 {
   margin-bottom: 0; /* Removes bottom margin from the first column header */
