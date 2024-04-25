@@ -447,7 +447,7 @@ h2 {
   text-align: justify; /* Justifies the text for a clean look */
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   margin-bottom: 15px; /* Space below the paragraph */
-  margin-top: 15px; 
+  margin-top: 10px; 
   border-left: 3px solid #3498db; /* Blue accent bar on the left */
   padding-top: auto;
   padding-left: 15px; /* Spacing to the left of text for padding from border */
@@ -460,4 +460,17 @@ h2 {
 .dropdown-menu {
   margin-top: 0.5rem; /* Adjust the top margin to push it down */
   position: static; /* Optional: Makes it part of the flow, pushing other content down */
+}
+.abc {
+  font-size: 2rem; /* Adjust the font size to your preference */
+  color: black; /* Pink color, change as desired */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make the text bold */
+  font-family: 'Helvetica', sans-serif; /* Change font family if needed */
+}
+
+/* Hover effect for the sexy title */
+.abc:hover {
+  color: darkgray;  
+  text-decoration: underline; /* Underline on hover */
 }
