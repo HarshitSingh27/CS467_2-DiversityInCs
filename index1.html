@@ -33,16 +33,45 @@
     <div class="col-md-12">
       <div class="filter-container">
         <div class="form-check">
-            <select class="form-control" id="rankingFilter">
-              <option value="all">All Rankings</option>
-              <option value="1-24">1-24</option>
-              <option value="25-49">25-49</option>
-              <option value="50-74">50-74</option>
-              <option value="75-99">75-99</option>
-              <option value="100-205">100-205</option>
-              <option value="Not Ranked">Not Ranked</option>
-            </select>
-          </div>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select Rankings
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <form class="px-4 py-3" id="rankingForm">
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input ranking-checkbox" id="rank-all" value="all" checked>
+                            <label class="form-check-label" for="rank-all">All Rankings</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input ranking-checkbox" id="rank-1-24" value="1-24">
+                            <label class="form-check-label" for="rank-1-24">1-24</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input ranking-checkbox" id="rank-25-49" value="25-49">
+                            <label class="form-check-label" for="rank-25-49">25-49</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input ranking-checkbox" id="rank-25-49" value="50-74">
+                            <label class="form-check-label" for="rank-25-49">50-74</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input ranking-checkbox" id="rank-25-49" value="75-99">
+                            <label class="form-check-label" for="rank-25-49">75-99</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input ranking-checkbox" id="rank-25-49" value="100-205">
+                            <label class="form-check-label" for="rank-25-49">100-205</label>
+                        </div>
+                        <!-- Add more rankings as needed -->
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input ranking-checkbox" id="rank-na" value="Not Ranked">
+                            <label class="form-check-label" for="rank-na">Not Ranked</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="public">
           <label class="form-check-label" for="public">Public</label>
@@ -53,11 +82,11 @@
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="minority">
-          <label class="form-check-label" for="minority">Minority</label>
+          <label class="form-check-label" for="minority">Minority-Serving</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="standard">
-          <label class="form-check-label" for="standard">Standard</label>
+          <label class="form-check-label" for="standard">Mainstream</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="interesting">
@@ -81,7 +110,8 @@
           <!-- University name as a button/link -->
           <a href="https://cs.illinois.edu/about/people/all-faculty" class="btn btn-primary btn-block">University of Illinois Urbana Champaign</a>
           <div class="tags">
-            <span class="tag standard">Standard</span>
+            <span class="tag ranking">5</span>
+            <span class="tag standard">Mainstream</span>
             <span class="tag public">Public</span>
             <!-- Add more tags as needed -->
           </div>
@@ -96,7 +126,8 @@
           <!-- University name as a button/link -->
           <a href="https://www2.eecs.berkeley.edu/Faculty/Lists/CS/faculty.html" class="btn btn-primary btn-block">University of California Berkeley</a>
           <div class="tags">
-            <span class="tag standard">Standard</span>
+            <span class="tag ranking">1</span>
+            <span class="tag standard">Mainstream</span>
             <span class="tag public">Public</span>
             <!-- Add more tags as needed -->
           </div>
@@ -111,7 +142,8 @@
         <div class="card-body">
           <a href="https://s3d.cmu.edu/people/faculty-index.html" class="btn btn-primary btn-block">Carnegie Mellon University</a>
           <div class="tags">
-            <span class="tag standard">Standard</span>
+            <span class="tag ranking">1</span>
+            <span class="tag standard">Mainstream</span>
             <span class="tag private">Private</span>
             <!-- Add more tags as needed -->
           </div>
@@ -125,7 +157,8 @@
           <div class="card-body">
             <a href="https://www.scs.gatech.edu/people/faculty" class="btn btn-primary btn-block">Georgia Institute of Technology</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">7</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -138,7 +171,8 @@
           <div class="card-body">
             <a href="https://www.cs.columbia.edu/people/faculty/" class="btn btn-primary btn-block">Columbia University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">12</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -151,7 +185,8 @@
           <div class="card-body">
             <a href="https://seas.harvard.edu/computer-science/people" class="btn btn-primary btn-block">Harvard University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">17</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -164,7 +199,8 @@
           <div class="card-body">
             <a href="https://www.cs.usc.edu/directory/faculty/" class="btn btn-primary btn-block">University of Southern California</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">21</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -178,7 +214,8 @@
           <div class="card-body">
             <a href="https://cse.osu.edu/directory/faculty" class="btn btn-primary btn-block">Ohio State University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">27</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -191,7 +228,8 @@
           <div class="card-body">
             <a href="https://cs.ucdavis.edu/person-type/faculty" class="btn btn-primary btn-block">University of California--Davis</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">36</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -205,7 +243,8 @@
           <div class="card-body">
             <a href="https://www.bu.edu/cs/people/faculty/" class="btn btn-primary btn-block">Boston University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">36</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -218,7 +257,8 @@
           <div class="card-body">
             <a href="https://www.colorado.edu/cs/faculty-staff-directory" class="btn btn-primary btn-block">University of Colorado--Boulder</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">40</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -231,7 +271,8 @@
           <div class="card-body">
             <a href="https://cse.umn.edu/cs/faculty-instructor-directory" class="btn btn-primary btn-block">University of Minnesota--Twin Cities</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">36</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -244,7 +285,8 @@
           <div class="card-body">
             <a href="https://www.cise.ufl.edu/people/faculty/" class="btn btn-primary btn-block">University of Florida</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">45</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -257,7 +299,8 @@
           <div class="card-body">
             <a href="https://web.cs.dartmouth.edu/people" class="btn btn-primary btn-block">Dartmouth College</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">50</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -270,7 +313,8 @@
           <div class="card-body">
             <a href="https://www.cs.rochester.edu/people/faculty/index.html" class="btn btn-primary btn-block">University of Rochester</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">50</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -283,7 +327,8 @@
           <div class="card-body">
             <a href="https://at3.cse.msu.edu/People/Faculty_Staff/" class="btn btn-primary btn-block">Michigan State University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">56</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -296,7 +341,8 @@
           <div class="card-body">
             <a href="https://cs.uchicago.edu/people/uchicago-faculty/all-faculty/" class="btn btn-primary btn-block">University of Illinois--Chicago</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">61</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -309,7 +355,8 @@
           <div class="card-body">
             <a href="https://computerscience.emory.edu/people/index.html" class="btn btn-primary btn-block">Emory University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">64</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -322,7 +369,8 @@
           <div class="card-body">
             <a href="https://cs.georgetown.edu/faculty/" class="btn btn-primary btn-block">Georgetown University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">70</span>
+              <span class="tag standard">Mainstream</span>
               <span class= "tag private">Private</span>
             </div>
           </div>
@@ -334,7 +382,8 @@
           <div class="card-body">
             <a href="https://cs.mines.edu/faculty-and-staff/" class="btn btn-primary btn-block">Colorado School of Mines</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">77</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -347,7 +396,8 @@
           <div class="card-body">
             <a href="https://ecs.syracuse.edu/faculty-staff" class="btn btn-primary btn-block">Syracuse University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">77</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag private">Private</span>
             </div>
           </div>
@@ -360,7 +410,8 @@
           <div class="card-body">
             <a href="https://www.tntech.edu/engineering/programs/csc/faculty-and-staff.php" class="btn btn-primary btn-block">University of Tennessee</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">86</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
             </div>
           </div>
@@ -373,7 +424,8 @@
           <div class="card-body">
             <a href="https://www.binghamton.edu/computer-science/people/index.html" class="btn btn-primary btn-block">Binghamton University--SUNY</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">96</span>
+              <span class="tag standard">Mainstream</span>
               <span class= "tag public">Public</span>
             </div>
           </div>
@@ -386,7 +438,8 @@
           <div class="card-body">
             <a href="https://www.uta.edu/academics/schools-colleges/engineering/academics/departments/cse/faculty-directory" class="btn btn-primary btn-block">University of Texas at Arlington</a>
             <div class="tags">
-              <span class= "tag standard">Standard</span>
+                <span class="tag ranking">96</span>
+              <span class= "tag standard">Mainstream</span>
               <span class= "tag public">Public</span>
             </div>
           </div>
@@ -399,7 +452,8 @@
           <div class="card-body">
             <a href="https://eng.auburn.edu/csse/people/#gsc.tab=0" class="btn btn-primary btn-block">Auburn University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">86</span>
+              <span class="tag standard">Mainstream</span>
               <span class= "tag public">Public</span>
             </div>
           </div>
@@ -411,6 +465,7 @@
           <div class="card-body">
             <a href="https://engineering.catholic.edu/research-and-faculty/faculty-profiles/eecs/index.html" class="btn btn-primary btn-block">The Catholic University Of America</a>
             <div class="tags">
+                <span class="tag ranking">205</span>
               <span class="tag private">Private</span>
               <span class="tag interesting">Catholic</span>
             </div>
@@ -424,6 +479,7 @@
           <div class="card-body">
             <a href="https://coe.hawaii.edu/cs/faculty/" class="btn btn-primary btn-block">University of Hawaii at Manoa</a>
             <div class="tags">
+                <span class="tag ranking">N/A</span>
               <span class="tag private">Private</span>
               <span class="tag minority">AAPI</span>
             </div>
@@ -437,7 +493,8 @@
           <div class="card-body">
             <a href="https://www.nmt.edu/academics/compsci/faculty/index.php" class="btn btn-primary btn-block">New Mexico Tech</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">176</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
               <!-- Add more tags as needed -->
             </div>
@@ -452,7 +509,8 @@
           <div class="card-body">
             <a href="https://cs.txstate.edu/accounts/faculty/" class="btn btn-primary btn-block">Texas State University</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">N/A</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
               <!-- Add more tags as needed -->
             </div>
@@ -467,7 +525,8 @@
           <div class="card-body">
             <a href="https://www.memphis.edu/cs/people/" class="btn btn-primary btn-block">University of Memphis</a>
             <div class="tags">
-              <span class="tag standard">Standard</span>
+                <span class="tag ranking">163</span>
+              <span class="tag standard">Mainstream</span>
               <span class="tag public">Public</span>
               <!-- Add more tags as needed -->
             </div>
@@ -481,6 +540,7 @@
           <div class="card-body">
             <a href="https://www1.wellesley.edu/cs/faculty" class="btn btn-primary btn-block">Wellesley College</a>
             <div class="tags">
+                <span class="tag ranking">N/A</span>
               <span class="tag private">Private</span>
               <span class="tag women-only">Women only</span>
             </div>
@@ -494,6 +554,7 @@
           <div class="card-body">
             <a href="https://www.science.smith.edu/departments/cs/faculty.php" class="btn btn-primary btn-block">Smith College</a>
             <div class="tags">
+                <span class="tag ranking">N/A</span>
               <span class="tag private">Private</span>
               <span class="tag women-only">Women only</span>
             </div>
@@ -507,6 +568,7 @@
           <div class="card-body">
             <a href="https://www.mtholyoke.edu/directory/departments-offices-centers/computer-science" class="btn btn-primary btn-block">Mount Holyoke College</a>
             <div class="tags">
+                <span class="tag ranking">N/A</span>
               <span class="tag private">Private</span>
               <span class="tag women-only">Women only</span>
             </div>
@@ -520,6 +582,7 @@
           <div class="card-body">
             <a href="https://www.vassar.edu/faculty/departments/computer-science" class="btn btn-primary btn-block">Vassar College</a>
             <div class="tags">
+                <span class="tag ranking">N/A</span>
               <span class="tag private">Private</span>
               <span class="tag women-only">Women only</span>
             </div>
@@ -533,6 +596,7 @@
           <div class="card-body">
             <a href="https://cs.barnard.edu/faculty-and-staff-CS" class="btn btn-primary btn-block">Barnard College</a>
             <div class="tags">
+                <span class="tag ranking">N/A</span>
               <span class="tag private">Private</span>
               <span class="tag women-only">Women only</span>
             </div>
@@ -547,6 +611,7 @@
               <div class="card-body">
                 <a href="https://cea.howard.edu/academics/departments/electrical-engineering-and-computer-science/people-eecs" class="btn btn-primary btn-block">Howard University</a>
                 <div class="tags">
+                    <span class="tag ranking">120</span>
                   <span class="tag private">Private</span>
                   <span class="tag minority">HBCU</span>
                 </div>
@@ -560,6 +625,7 @@
                 <div class="card-body">
                 <a href="https://www.csun.edu/engineering-computer-science/computer-science/computer-science-faculty" class="btn btn-primary btn-block">California State University, East Bay</a>
                 <div class="tags">
+                    <span class="tag ranking">N/A</span>
                 <span class="tag public">Public</span>
                 <span class="tag minority">AAPI</span>
             </div>
@@ -575,6 +641,7 @@
               <div class="card-body">
                 <a href="https://home.hamptonu.edu/science/computer-science-faculty-staff/" class="btn btn-primary btn-block">Hampton University</a>
                 <div class="tags">
+                    <span class="tag ranking">N/A</span>
                   <span class="tag public">Public</span>
                   <span class="tag minority">HBCU</span>
                 </div>
@@ -588,6 +655,7 @@
               <div class="card-body">
                 <a href="https://www.hpu.edu/cncs/comp-sci/computer-science-and-engineering-faculty.html" class="btn btn-primary btn-block">Hawaii Pacific University</a>
                 <div class="tags">
+                    <span class="tag ranking">N/A</span>
                   <span class="tag public">Public</span>
                   <span class="tag interesting">Most Diverse</span>
                 </div>
@@ -601,6 +669,7 @@
               <div class="card-body">
                 <a href="https://www.utep.edu/cs/people/" class="btn btn-primary btn-block">The University of Texas at El Paso</a>
                 <div class="tags">
+                    <span class="tag ranking">N/A</span>
                   <span class="tag public">Public</span>
                   <span class="tag minority">HSI</span>
                 </div>
@@ -614,6 +683,7 @@
               <div class="card-body">
                 <a href="https://www.csueastbay.edu/cs/faculty-staff/index.html" class="btn btn-primary btn-block">California State University, Northridge</a>
                 <div class="tags">
+                    <span class="tag ranking">N/A</span>
                   <span class="tag public">Public</span>
                   <span class="tag minority">HSI</span>
                 </div>
@@ -628,6 +698,7 @@
               <div class="card-body">
                 <a href="https://www.fortlewis.edu/academics/schools-departments/departments/physics-engineering-department/about-our-faculty-staff" class="btn btn-primary btn-block">Fort Lewis College</a>
                 <div class="tags">
+                    <span class="tag ranking">N/A</span>
                   <span class="tag public">Public</span>
                   <span class="tag minority">NASNTI</span>
                 </div>
@@ -642,6 +713,7 @@
       <div class="card-body">
         <a href="https://directory.skc.edu/" class="btn btn-primary btn-block">Salish Kootenai College</a>
         <div class="tags">
+            <span class="tag ranking">N/A</span>
           <span class="tag private">Private</span>
           <span class="tag minority">NASNTI</span>
         </div>
@@ -656,6 +728,7 @@
       <div class="card-body">
         <a href="https://www.alaskapacific.edu/people-department/faculty/" class="btn btn-primary btn-block">Alaska Pacific University</a>
         <div class="tags">
+            <span class="tag ranking">N/A</span>
           <span class="tag private">Private</span>
           <span class="tag minority">ANSI/NHSI</span>
         </div>
@@ -670,6 +743,7 @@
               <div class="card-body">
                 <a href="https://cmn.edu/faculty-staff/" class="btn btn-primary btn-block">College of the Muskogee Nation</a>
                 <div class="tags">
+                    <span class="tag ranking">N/A</span>
                   <span class="tag public">Public</span>
                   <span class="tag minority">TCU</span>
                 </div>
@@ -683,6 +757,7 @@
           <div class="card-body">
             <a href="https://www.spelman.edu/academics/majors-and-programs/computer-and-information-sciences/faculty" class="btn btn-primary btn-block">Spelman College</a>
             <div class="tags">
+                <span class="tag ranking">N/A</span>
               <span class="tag private">Private</span>
               <span class="tag women-only">Women only</span>
               <span class="tag minority">HBCU</span>
@@ -770,62 +845,72 @@
 </div>
 </div>
 <!-- Bootstrap JS and dependencies -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const filters = document.querySelectorAll('.form-check-input');
-  const rankingSelect = document.getElementById('rankingFilter');
+  const filters = document.querySelectorAll('.form-check-input:not(.ranking-checkbox)');
+  const rankingCheckboxes = document.querySelectorAll('.ranking-checkbox');
 
+  // Event listeners for non-ranking filters
   filters.forEach(filter => {
     filter.addEventListener('change', applyFilters);
   });
 
-  document.getElementById('rankingFilter').addEventListener('change', applyFilters);
-
+  // Event listeners for ranking checkboxes
+  rankingCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+      applyFilters();
+    });
+  });
 
   function applyFilters() {
-        const isPublic = document.getElementById('public').checked;
-        const isPrivate = document.getElementById('private').checked;
-        const isMinority = document.getElementById('minority').checked;
-        const isStandard = document.getElementById('standard').checked;
-        const isInteresting = document.getElementById('interesting').checked;
-        const isWomenOnly = document.getElementById('women-only').checked;
-        const selectedRanking = document.getElementById('rankingFilter').value;
-        const cards = document.querySelectorAll('.col-sm-6.col-md-4.col-lg-3'); // Directly target the grid columns
+    const isPublic = document.getElementById('public').checked;
+    const isPrivate = document.getElementById('private').checked;
+    const isMinority = document.getElementById('minority').checked;
+    const isStandard = document.getElementById('standard').checked;
+    const isInteresting = document.getElementById('interesting').checked;
+    const isWomenOnly = document.getElementById('women-only').checked;
 
-        cards.forEach(card => {
-            const cardData = card.querySelector('.card');
-            const publicAttr = cardData.getAttribute('data-public') === 'true';
-            const privateAttr = cardData.getAttribute('data-public') === 'false';
-            const minorityAttr = cardData.getAttribute('data-category') === 'minority';
-            const standardAttr = cardData.getAttribute('data-category') === 'standard';
-            const interestingAttr = cardData.getAttribute('data-category2') === 'interesting';
-            const womenOnlyAttr = cardData.getAttribute('data-women-only') === 'true';
-            const rankingAttr = cardData.getAttribute('data-ranking');
-            let isMatch = true; // Assume the card matches filter criteria
-            if ((isPublic && !publicAttr) || (isPrivate && !privateAttr)) {
-                isMatch = false;
-            }
-            if ((isMinority && !minorityAttr) || (isStandard && !standardAttr) || (isInteresting && !interestingAttr)) {
-                isMatch = false;
-            }
-            if (isWomenOnly && !womenOnlyAttr) {
-            isMatch = false; // Apply the women-only filter
-            }
-            if (selectedRanking !== "all" && rankingAttr !== selectedRanking) {
-            isMatch = false; // Apply the ranking filter
-            }
+    // Collect all selected rankings
+    let selectedRankings = Array.from(rankingCheckboxes).filter(cb => cb.checked).map(cb => cb.value);
+    const cards = document.querySelectorAll('.col-sm-6.col-md-4.col-lg-3'); // Directly target the grid columns
 
-            if (isMatch) {
-                card.classList.remove('d-none');
-            } else {
-                card.classList.add('d-none');
-            }
-        });
-    }
+    cards.forEach(card => {
+      const cardData = card.querySelector('.card');
+      const publicAttr = cardData.getAttribute('data-public') === 'true';
+      const privateAttr = cardData.getAttribute('data-public') === 'false';
+      const minorityAttr = cardData.getAttribute('data-category') === 'minority';
+      const standardAttr = cardData.getAttribute('data-category') === 'standard';
+      const interestingAttr = cardData.getAttribute('data-category2') === 'interesting';
+      const womenOnlyAttr = cardData.getAttribute('data-women-only') === 'true';
+      const rankingAttr = cardData.getAttribute('data-ranking');
+
+      let isMatch = true; // Assume the card matches filter criteria
+
+      // Apply filters
+      if ((isPublic && !publicAttr) || (isPrivate && !privateAttr)) {
+        isMatch = false;
+      }
+      if ((isMinority && !minorityAttr) || (isStandard && !standardAttr) || (isInteresting && !interestingAttr)) {
+        isMatch = false;
+      }
+      if (isWomenOnly && !womenOnlyAttr) {
+        isMatch = false;
+      }
+      if (!selectedRankings.includes("all") && !selectedRankings.includes(rankingAttr)) {
+        isMatch = false; // Apply the ranking filter
+      }
+
+      if (isMatch) {
+        card.classList.remove('d-none');
+      } else {
+        card.classList.add('d-none');
+      }
+    });
+  }
 
     // Function to handle clicking on a card
     function handleCardClick(event) {

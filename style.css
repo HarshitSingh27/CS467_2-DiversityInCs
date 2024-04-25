@@ -360,6 +360,10 @@ color: black;
   background-color: pink; /* Pink */
   color: white;
 }
+.ranking {
+  background-color: red; /* Pink */
+  color: white;
+}
 .btn-main-page {
   background-color: #007bff; /* Your theme's main color */
   color: white;
@@ -435,3 +439,22 @@ h2 {
   margin-bottom: 20px; /* Space below the line to separate from content */
 }
 
+.card-text2 {
+  color: #2c3e50; /* A deep, sophisticated blue-gray */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, readable font */
+  font-size: 16px; /* Slightly larger font size for readability */
+  line-height: 1.6; /* Improved line spacing for better readability */
+  text-align: justify; /* Justifies the text for a clean look */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 15px; /* Space below the paragraph */
+  border-left: 3px solid #3498db; /* Blue accent bar on the left */
+  padding-left: 15px; /* Spacing to the left of text for padding from border */
+  padding-right: 15px; /* Spacing to the left of text for padding from border */
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft box shadow for a 3D effect */
+  border-radius: 4px; /* Rounded corners */
+}
+.dropdown-menu {
+  margin-top: 0.5rem; /* Adjust the top margin to push it down */
+  position: static; /* Optional: Makes it part of the flow, pushing other content down */
+}
