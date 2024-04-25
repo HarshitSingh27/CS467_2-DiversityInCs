@@ -29,15 +29,28 @@ body {
     letter-spacing: 1.5px; /* Spacing between letters */
   }
   .card {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     border: none;
     border-radius: 0.25rem;
-    height: 400px; /* Adjust the height as needed */
     overflow: hidden; /* Hide any content that exceeds the height */
     position: relative;
+    object-fit: cover;
+    background: hsla(0, 0%, 100%, 1);
+
+    background: linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 83%, 1) 100%);
+    
+    background: -moz-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 83%, 1) 100%);
+    
+    background: -webkit-linear-gradient(90deg, hsla(0, 0%, 100%, 1) 0%, hsla(0, 0%, 83%, 1) 100%);
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#D3D3D3", GradientType=1 );
+  }
+  .card-body {
+    padding: 0.5rem; /* Adjust padding as needed */
+    object-fit: cover;
   }
   
   
@@ -46,22 +59,14 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
+  
   .card img {
-    width: 100%;
+    width: 100% !important;
+    height: auto;
+    object-fit: cover !important; 
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-  }
-  
-  .card-body a {
-    display: block;
-    background-color: transparent;
-    color: #007bff;
-    padding: 0.375rem 0.75rem;
-    border: 1px solid #007bff;
-    border-radius: 0.25rem;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    text-decoration: none;
-  }
+    }
   
   .card-body a:hover {
     background-color: #007bff;
@@ -109,21 +114,24 @@ body {
     background: #fff;  
   }
   .btn-primary {
-    display: block;
-    width: 100%;
-    margin: 0.5rem 0;
-    margin-bottom: auto;
-    background-color: #004085!important; /* A deep blue */
-    border-color: #003366!important; /* A slightly darker border for depth */
-    color: #fff !important;
-    padding: 0.75rem 1.25rem;
-    font-size: 1rem;
-    line-height: 1.5;
+      /* make it a block element to fill the width of its container */
+    object-fit: cover;  
+    width: auto; /* let it size according to its content */
+    margin-top: 0% !important;
+    margin: 0px auto 10px; /* top and left/right auto for centering, larger bottom margin for space */
+    padding: 8px 10px; /* reduce padding to make button smaller */
+    background-color: #004085!important;
+    border-color: #003366!important;
+    color: #fff!important;
+    font-size: 0.6rem; /* reduce font-size for a smaller button */
+    line-height: 1; /* adjust line height accordingly */
     border-radius: 0.375rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
                 border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
+    text-align: center; /* ensure text is centered */
+     /* center button vertically if needed */
+}
   
   .btn-primary:hover,
   .btn-primary:focus {
@@ -294,21 +302,17 @@ body {
 }
 /* Style for tags */
 .tags {
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  right: 0;
-  padding: 8px;
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add background color to make tags stand out */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.01rem; 
 }
 
 .tag {
-  display: inline-block;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 10px;
-  font-weight: bold;
-  margin-right: 5px;
+    padding: 0.25rem 0.5rem; /* Padding inside each tag */
+    margin: 0.25rem; /* Space between tags */
+    border-radius: 0.25rem; /* Rounded corners for tags */
+    font-size: 0.7rem; /* Font size for tags */
 }
 
 .standard {

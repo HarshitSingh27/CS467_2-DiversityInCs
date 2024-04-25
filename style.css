@@ -53,6 +53,30 @@
   /* height: auto; /* or set a max-height if needed */
   /* object-fit: cover; /* cover will ensure no white space, contain will ensure no cropping */
 }
+.card .card-img-top {
+  width: 100%; /* Force the image to expand to the full width of its parent */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Display block to remove any bottom margin/whitespace */
+  border-top-left-radius: 0.25rem; /* Keep your existing border-radius */
+  border-top-right-radius: 0.25rem; /* Keep your existing border-radius */
+}
+
+.card .card-body {
+  position: relative; /* Needed for absolute positioning of the tags */
+}
+
+.card .tags {
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the card-body */
+  left: 0; /* Align to the left */
+  width: 100%; /* Take full width of the card-body */
+  background-color: rgba(255, 255, 255, 0.9); /* Light background to make text visible */
+  display: flex; /* Flex to arrange child elements in a line */
+  justify-content: center; /* Center tags horizontally */
+  flex-wrap: wrap; /* Allow tags to wrap to next line on small screens */
+  padding: 0.5rem; /* Padding inside the tags */
+}
+
 .card-body a {
   display: block;
   background-color: transparent;
