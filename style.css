@@ -415,7 +415,6 @@ color: black;
 .col-md-6:first-child h2 {
   margin-bottom: 0; /* Removes bottom margin from the first column header */
 }
-/* Combined style for card text */
 .card-text,
 .card-text2,
 .card-title {
