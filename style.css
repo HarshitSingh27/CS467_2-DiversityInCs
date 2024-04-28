@@ -1,32 +1,30 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #C9D6FF;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: #C9D6FF;   
+  background: -webkit-linear-gradient(to top, #E2E2E2, #C9D6FF);  
+  background: linear-gradient(to top, #E2E2E2, #C9D6FF);  
   margin: 0;
   padding: 0;
 }
 
 
 .header {
-  background: #bdc3c7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
+  background: #bdc3c7;   
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);   
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);  
   text-align: center;
-  padding: 40px 20px; /* Larger padding */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  margin-bottom: 30px; /* Space below header */
+  padding: 40px 20px;  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+  margin-bottom: 30px;  
 }
 
 .header h1 {
-  font-size: 3rem; /* Larger font size */
+  font-size: 3rem;  
   margin: 0;
   padding: 0;
   font-weight: bold;
-  text-transform: uppercase; /* Capitalize letters */
-  letter-spacing: 1.5px; /* Spacing between letters */
+  text-transform: uppercase;  
+  letter-spacing: 1.5px; 
 }
 .card {
   margin-bottom: 10px;
@@ -35,7 +33,7 @@ body {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border: none;
   border-radius: 0.25rem;
-  overflow: hidden; /* Hide any content that exceeds the height */
+  overflow: hidden;  
   position: relative;
   object-fit: cover;
   background: hsla(0, 0%, 100%, 1);
@@ -49,7 +47,7 @@ body {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#D3D3D3", GradientType=1 );
 }
 .card-body {
-  padding: 0.5rem; /* Adjust padding as needed */
+  padding: 0.5rem;  
   object-fit: cover;
 }
 
@@ -77,8 +75,8 @@ body {
   text-align: center;
   padding: 20px;
   width: 100%;
-  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);   
+  background: linear-gradient(to right, #2c3e50, #bdc3c7);  
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -96,23 +94,23 @@ body {
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  font-size: 0.9rem; /* Default font size for the content in the footer */
+  font-size: 0.9rem;  
 }
 
 .card-like h2, .card-like h3 {
-  font-size: 1.25rem; /* Adjusted font size for headings */
+  font-size: 1.25rem;  
 }
 
 @media (max-width: 768px) {
   .footer {
-      position: relative; /* Adjusts positioning on smaller screens */
+      position: relative;  
   }
   .card-like {
-      padding: 10px; /* Smaller padding for smaller screens */
-      font-size: 0.85rem; /* Smaller font size for text on small screens */
+      padding: 10px;  
+      font-size: 0.85rem; 
   }
   .card-like h2, .card-like h3 {
-      font-size: 1.1rem; /* Smaller headings on small screens */
+      font-size: 1.1rem;  
   }
 }
 .modal-body img {
@@ -132,38 +130,38 @@ body {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFFFFF", endColorstr="#D3D3D3", GradientType=1 ); 
 }
 .btn-primary {
-    /* make it a block element to fill the width of its container */
+     
   object-fit: cover;  
-  width: auto; /* let it size according to its content */
+  width: auto;  
   margin-top: 0% !important;
-  margin: 0px auto 10px; /* top and left/right auto for centering, larger bottom margin for space */
-  padding: 8px 10px; /* reduce padding to make button smaller */
+  margin: 0px auto 10px;  
+  padding: 8px 10px;  
   background-color: #004085!important;
   border-color: #003366!important;
   color: #fff!important;
-  font-size: 0.6rem; /* reduce font-size for a smaller button */
-  line-height: 1; /* adjust line height accordingly */
+  font-size: 0.6rem;  
+  line-height: 1;  
   border-radius: 0.375rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
               border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  text-align: center; /* ensure text is centered */
-   /* center button vertically if needed */
+  text-align: center;  
+    
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
-  background-color: #fff!important; /* White background for hover/focus */
-  color: #004085!important; /* Blue text for hover/focus */
-  border-color: #00488a!important; /* A matching border color for hover/focus */
-  text-decoration: none; /* Optional: Removes underline from text */
+  background-color: #fff!important; 
+  color: #004085!important;  
+  border-color: #00488a!important;  
+  text-decoration: none;  
   box-shadow: 0 0 0 0.2rem rgba(0, 76, 133, 0.5);
 }
 
 .btn-primary:active {
-  background-color: #fff!important; /* White background for active state */
-  color: #004085!important; /* Blue text for active state */
-  border-color: #002b4e!important; /* Border color for the active state */
+  background-color: #fff!important;  
+  color: #004085!important;  
+  border-color: #002b4e!important; 
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
@@ -195,41 +193,40 @@ body {
 .d-none {
   display: none !important;
 }
-/* Container for the filter options */
+ 
 .filter-container {
-  background: #f2f2f2; /* Light grey background */
-  border-radius: 8px; /* Rounded corners */
-  padding: 20px; /* Padding around the content */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-top: 20px; /* Margin top for spacing */
+  background: #f2f2f2; 
+  border-radius: 8px;  
+  padding: 20px;  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+  margin-top: 20px;  
 }
 
-/* Custom styling for form-check components */
+ 
 .form-check {
-  padding: 10px; /* Padding around the checkbox for better clickability */
-  margin-bottom: 10px; /* Margin bottom for spacing */
+  padding: 10px;  
+  margin-bottom: 10px;  
 }
 
-/* Styling for each checkbox input */
+ 
 .form-check-input {
-  width: 20px; /* Width of the checkbox */
-  height: 20px; /* Height of the checkbox */
-  cursor: pointer; /* Pointer cursor on hover */
-  position: relative; /* Relative position for pseudo-elements */
-  appearance: none; /* Remove default styles */
-  border: 2px solid #007bff; /* Blue border color */
-  border-radius: 5px; /* Slightly rounded corners for the checkbox */
-  outline: none; /* Remove focus outline */
-  transition: background-color 0.3s, border-color 0.3s; /* Smooth transition for background and border color */
+  width: 20px;  
+  height: 20px;  
+  cursor: pointer;  
+  position: relative;  
+  appearance: none;  
+  border: 2px solid #007bff;  
+  border-radius: 5px;  
+  outline: none;  
+  transition: background-color 0.3s, border-color 0.3s;  
 }
-
-/* Checkmark appearance when checked */
+ 
 .form-check-input:checked {
-  background-color: #007bff; /* Blue background for checked state */
-  border-color: #0056b3; /* Darker blue border for checked state */
+  background-color: #007bff;  
+  border-color: #0056b3;  
 }
 
-/* Pseudo-element for the checkmark */
+ 
 .form-check-input:checked::after {
   content: "";
   position: absolute;
@@ -242,57 +239,57 @@ body {
   transform: rotate(45deg);
 }
 
-/* Styling for labels associated with each checkbox */
+ 
 .form-check-label {
-  margin-left: 10px; /* Space between checkbox and label */
-  font-size: 16px; /* Larger font size for better readability */
-  color: #333; /* Dark grey color for text */
-  cursor: pointer; /* Pointer cursor on hover */
-  user-select: none; /* Prevent text selection */
+  margin-left: 10px;  
+  font-size: 16px;  
+  color: #333;  
+  cursor: pointer;  
+  user-select: none;  
 }
 
-/* Hover effect on the custom checkbox */
+ 
 .form-check-input:hover {
-  border-color: #0056b3; /* Darker border on hover */
+  border-color: #0056b3;  
 }
-/* Container for the filter options */
+ 
 .filter-container {
-background: #f2f2f2; /* Light grey background */
-border-radius: 8px; /* Rounded corners */
-padding: 20px; /* Padding around the content */
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-margin-top: 20px; /* Margin top for spacing */
-display: flex; /* Use flexbox for horizontal layout */
-flex-wrap: wrap; /* Allow wrapping for smaller screens */
-justify-content: space-around; /* Space out checkboxes evenly */
+background: #f2f2f2;  
+border-radius: 8px;  
+padding: 20px;  
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+margin-top: 20px;  
+display: flex;  
+flex-wrap: wrap;  
+justify-content: space-around;  
 }
 
-/* Styling for form-check components (adjusted for horizontal layout) */
+ 
 .form-check {
-margin: 5px 10px; /* Margins for spacing between checkboxes */
-display: flex; /* Display flex to align checkbox and label horizontally */
-align-items: center; /* Align items vertically in the center */
+margin: 5px 10px;  
+display: flex;  
+align-items: center;  
 }
 
-/* Styling for each checkbox input */
+ 
 .form-check-input {
-width: 20px; /* Width of the checkbox */
-height: 20px; /* Height of the checkbox */
-cursor: pointer; /* Pointer cursor on hover */
-appearance: none; /* Remove default styles */
-border: 2px solid #007bff; /* Blue border color */
-border-radius: 5px; /* Slightly rounded corners for the checkbox */
-outline: none; /* Remove focus outline */
-transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
+width: 20px;  
+height: 20px;  
+cursor: pointer;  
+appearance: none;  
+border: 2px solid #007bff;  
+border-radius: 5px;  
+outline: none;  
+transition: background-color 0.3s, border-color 0.3s;  
 }
 
-/* Checkmark appearance when checked */
+ 
 .form-check-input:checked {
-background-color: #007bff; /* Blue background for checked state */
-border-color: #0056b3; /* Darker blue border for checked state */
+background-color: #007bff;  
+border-color: #0056b3;  
 }
 
-/* Pseudo-element for the checkmark */
+ 
 .form-check-input:checked::after {
 content: "";
 position: absolute;
@@ -305,20 +302,20 @@ border-width: 0 3px 3px 0;
 transform: rotate(45deg);
 }
 
-/* Styling for labels associated with each checkbox */
+ 
 .form-check-label {
-margin-left: 10px; /* Space between checkbox and label */
-font-size: 16px; /* Larger font size for better readability */
-color: #333; /* Dark grey color for text */
-cursor: pointer; /* Pointer cursor on hover */
-user-select: none; /* Prevent text selection */
+margin-left: 10px;  
+font-size: 16px;  
+color: #333;  
+cursor: pointer;  
+user-select: none;  
 }
 
-/* Hover effect on the custom checkbox */
+ 
 .form-check-input:hover {
-border-color: #0056b3; /* Darker border on hover */
+border-color: #0056b3;  
 }
-/* Style for tags */
+ 
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -327,33 +324,33 @@ border-color: #0056b3; /* Darker border on hover */
 }
 
 .tag {
-  padding: 0.25rem 0.5rem; /* Padding inside each tag */
-  margin: 0.25rem; /* Space between tags */
-  border-radius: 0.25rem; /* Rounded corners for tags */
-  font-size: 0.7rem; /* Font size for tags */
+  padding: 0.25rem 0.5rem;  
+  margin: 0.25rem;  
+  border-radius: 0.25rem;  
+  font-size: 0.7rem;  
 }
 
 .standard {
-background-color: #007bff; /* Blue */
+background-color: #007bff;  
 color: white;
 }
 
 .minority {
-background-color: #28a745; /* Green */
+background-color: #28a745;  
 color: white;
 }
 .public {
-background-color: #9834eb; /* Blue */
+background-color: #9834eb;  
 color: white;
 }
 
 .private {
-background-color: #6c757d; /* Gray */
+background-color: #6c757d;  
 color: white;
 }
 
 .interesting {
-background-color: #ffc107; /* Yellow */
+background-color: #ffc107;  
 color: black;
 }
 .women-only {
@@ -361,11 +358,11 @@ color: black;
   color: white;
 }
 .ranking {
-  background-color: red; /* Pink */
+  background-color: red;  
   color: white;
 }
 .btn-main-page {
-  background-color: #007bff; /* Your theme's main color */
+  background-color: #007bff;  
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -376,74 +373,74 @@ color: black;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 
-  /* Centering the button when in a full-width row */
-  display: inline-block; /* For centering in the text-center div */
-  margin-bottom: 1rem; /* Spacing between button and filters */
+   
+  display: inline-block;  
+  margin-bottom: 1rem;  
 }
 
 .btn-main-page:hover,
 .btn-main-page:focus {
-  background-color: #0056b3; /* A darker shade for hover state */
+  background-color: #0056b3;  
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   color: #fff;
-  text-decoration: none; /* Remove underline from anchor on hover */
+  text-decoration: none;  
 }
 .legend-list {
-  list-style: none; /* Removes default list styling */
-  padding-left: 0; /* Aligns list to the left */
-  margin-top: 0; /* Reduces space above the list */
+  list-style: none;  
+  padding-left: 0;  
+  margin-top: 0;  
 }
 
 .legend-list li {
-  margin-bottom: 10px; /* Adjust spacing between items */
-  font-size: 14px; /* Maintain a smaller font for compactness */
+  margin-bottom: 10px;  
+  font-size: 14px;  
 }
 
 .legend-term {
-  font-weight: bold; /* Highlights terms */
-  color: #0056b3; /* Color for terms, can be adjusted */
+  font-weight: bold;  
+  color: #0056b3;  
 }
 
 #leg {
-  background-color:#f2f2f2; /* Subtle background color */
-  padding: 20px; /* Padding for the container */
-  border-radius: 8px; /* Rounded corners for aesthetics */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Light shadow for depth */
-  margin-bottom: 40px; /* Space below the legend */
+  background-color:#f2f2f2;  
+  padding: 20px;  
+  border-radius: 8px;  
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);  
+  margin-bottom: 40px;  
 }
-/* Ensures proper vertical alignment and spacing */
+ 
 .col-md-6:first-child h2 {
-  margin-bottom: 0; /* Removes bottom margin from the first column header */
+  margin-bottom: 0;  
 }
-.card-text,
+.card-text
 .card-text2,
 .card-title {
-  font-size: 1.1rem; /* Increase font size */
-  line-height: 1.6; /* Increase line height for better readability */
-  color: #2c3e50; /* A deep, sophisticated blue-gray */
-  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, readable font */
-  text-align: justify; /* Justifies the text for a clean look */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  margin-bottom: 15px; /* Space below the paragraph */
-  margin-top: 10px; /* Space above the paragraph */
-  padding-left: 15px; /* Spacing to the left of text for padding from border */
-  padding-right: 15px; /* Spacing to the left of text for padding from border */
-  padding-top: 10px; /* Padding to the top of text */
-  padding-bottom: 10px; /* Padding to the bottom of text */
-  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Soft box shadow for a 3D effect */
-  border-radius: 4px; /* Rounded corners */
-  border-left: 3px solid #3498db; /* Blue accent bar on the left */
+  font-size: 1.1rem;  
+  line-height: 1.6;  
+  color: #2c3e50;  
+  font-family: 'Helvetica Neue', Arial, sans-serif;  
+  text-align: justify;  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);  
+  margin-bottom: 15px;  
+  margin-top: 10px;  
+  padding-left: 15px;  
+  padding-right: 15px;  
+  padding-top: 10px;  
+  padding-bottom: 10px;  
+  background-color: rgba(255, 255, 255, 0.8);  
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);  
+  border-radius: 4px;  
+  border-left: 3px solid #3498db;  
 }
 .section-title {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Use a modern and readable font */
-  color: #343a40; /* Dark grey color for better readability */
-  font-size: 24px; /* Slightly larger font size for emphasis */
-  font-weight: bold; /* Bold text for clear heading */
-  text-transform: uppercase; /* Uppercase for a modern look */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-  padding-bottom: 10px; /* Space below the title */
-  border-bottom: 2px solid #007bff; /* Blue accent line for a pop of color */
-  border-radius: 0.375rem; /* Rounded corners for a modern look */
-  margin-bottom: 20px; /* Space below the line to separate from content */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+  color: #343a40;  
+  font-size: 24px;  
+  font-weight: bold;  
+  text-transform: uppercase;  
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);  
+  padding-bottom: 10px;  
+  border-bottom: 2px solid #007bff;  
+  border-radius: 0.375rem;  
+  margin-bottom: 20px;  
 }
