@@ -1,4 +1,4 @@
-# Diversity in CS Faculty [LINK](https://cs-faculty-diversity.web.app/)
+# Diversity in CS Faculty [LINK](https://cs-faculty-diversity.web.app/index1.html)
 
 ## Project Overview
 
